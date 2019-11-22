@@ -37,17 +37,17 @@ a:link {
 
 /* visited link */
 a:visited {
-  color: gray;
+  color: black;
 }
 
 /* mouse over link */
 a:hover {
-  color: yellow;
+  color: white;
 }
 
 /* selected link */
 a:active {
-  color: white;
+  color: orange;
 }
 
 
