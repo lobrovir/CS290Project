@@ -21,6 +21,23 @@ h1 {
   background-color: DarkRed;
   color: black;
   padding: 10px 10px 10px 10px;
-  font-size: 3vw;
+  font-size: 2vw;
+}
+
+links:link {
+  color: black;
+}
+links:visited {
+  color: gray;
+}
+
+/* mouse over link */
+links:hover {
+  color: DarkGreen;
+}
+
+/* selected link */
+links:active {
+  color: green;
 }
 
