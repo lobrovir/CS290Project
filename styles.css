@@ -3,7 +3,7 @@
   padding:0px;
 }
 body {
-  background-color: lightblue;
+  background-color: black;
   font-family: "Apple Chancery", cursive;
 }
 p {
@@ -14,11 +14,12 @@ p {
 }
 h1 {
   text-align: center;
+  color: DarkRed;
 }
 
 h4 {
   text-align: center;
-  background-color: red;
+  background-color: DarkRed;
   padding: 20px 20px 20px 20px;
 }
 table {
