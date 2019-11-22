@@ -4,7 +4,7 @@
 }
 body {
   background-color: black;
-  font: bold Times, Times New Roman, serif;
+
 }
 p {
 
@@ -12,32 +12,38 @@ p {
 h1 {
   text-align: center;
   color: DarkRed;
-  padding: 10px 30px 10px 30px
+  padding: 10px 20px 10px 20px;
   font-size: 5vw;
 }
 
 .links {
-  text-align: justify;
+  text-align: center;
   background-color: DarkRed;
-  color: black;
   padding: 10px 10px 10px 10px;
   font-size: 2vw;
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 10px;
 }
 
-links:link {
+a:link {
   color: black;
 }
-links:visited {
+
+/* visited link */
+a:visited {
   color: gray;
 }
 
 /* mouse over link */
-links:hover {
-  color: DarkGreen;
+a:hover {
+  color: yellow;
 }
 
 /* selected link */
-links:active {
-  color: green;
+a:active {
+  color: white;
 }
+
+
 
