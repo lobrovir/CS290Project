@@ -2,7 +2,9 @@
   margin:0px;
   padding:0px;
 }
-
+body {
+  background-color: lightblue;
+}
 p {
   display: block;
   width: 400px;
