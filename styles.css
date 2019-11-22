@@ -17,7 +17,7 @@ h1 {
   color: DarkRed;
 }
 
-h4 {
+div.links {
   text-align: center;
   background-color: DarkRed;
   padding: 20px 20px 20px 20px;
