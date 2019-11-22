@@ -4,6 +4,11 @@
 }
 body {
   background-color: black;
+  background-image: url("https://github.com/lobrovir/CS290Project/blob/master/dragon_test.png?raw=true"), url("https://github.com/lobrovir/CS290Project/blob/master/warrior_test.png?raw=true");
+  background-position: left, right;
+  background-size: 15vw;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
 }
 p {
@@ -12,7 +17,7 @@ p {
 h1 {
   text-align: center;
   color: DarkRed;
-  padding: 10px 30px 10px 30px;
+  padding: 10px 20px 10px 20px;
   font-size: 5vw;
 }
 
@@ -30,16 +35,19 @@ a:link {
   color: black;
 }
 
+/* visited link */
 a:visited {
-  color: black;
+  color: gray;
 }
 
+/* mouse over link */
 a:hover {
-  color: white;
+  color: yellow;
 }
 
+/* selected link */
 a:active {
-  color: orange;
+  color: white;
 }
 
 
