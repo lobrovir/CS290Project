@@ -4,7 +4,7 @@
 }
 body {
   background-color: black;
-  font-family: "Luminari", fantasy;
+  font: italic bold 12px/30px Luminari, fantasy;
 }
 p {
 
