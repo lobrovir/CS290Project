@@ -1,20 +1,4 @@
 * {
-  margin:0px;
-  padding:0px;
-}
-body {
-  background-color: black;
-  background-image: url("https://github.com/lobrovir/CS290Project/blob/master/dragon_test.png?raw=true"), url("https://github.com/lobrovir/CS290Project/blob/master/warrior_test.png?raw=true");
-  background-position: left, right;
-  background-size: 15vw;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
-}
-p {
-
-}
-h1 {* {
   margin: 0px;
   padding: 0px;
 }
@@ -28,8 +12,6 @@ body {
   background-attachment: fixed;
 
 }
-
-p {}
 
 h1 {
   text-align: center;
@@ -86,41 +68,3 @@ th {
 td{
   border: solid red 1px;
 }
-
-  text-align: center;
-  color: DarkRed;
-  padding: 10px 20px 10px 20px;
-  font-size: 5vw;
-}
-
-.links {
-  text-align: center;
-  background-color: DarkRed;
-  padding: 10px 10px 10px 10px;
-  font-size: 2vw;
-  display: grid;
-  grid-auto-flow: column;
-  grid-column-gap: 10px;
-}
-
-a:link {
-  color: black;
-}
-
-/* visited link */
-a:visited {
-  color: black;
-}
-
-/* mouse over link */
-a:hover {
-  color: white;
-}
-
-/* selected link */
-a:active {
-  color: orange;
-}
-
-
-
