@@ -69,3 +69,20 @@ th {
 td{
   border: solid red .25vw;
 }
+.slideshow{
+  margin-left:35vw;
+}
+.lButton{
+    position:absolute;
+left: 20vw;
+top: 40vw;
+background-color:red;
+font-size:3vw;
+}
+.rButton{
+position:absolute;
+right: 20vw;
+top: 40vw;
+background-color:red;
+font-size:3vw;
+}
