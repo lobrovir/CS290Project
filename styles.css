@@ -56,7 +56,6 @@ a:active {
 }
 
 
-
 table {
   color: white;
   border: solid DarkRed 1px;
@@ -86,3 +85,13 @@ top: 40vw;
 background-color:red;
 font-size:3vw;
 }
+ul {
+  list-style-position: inside;
+  color: white;
+  margin-left:20vw; 
+  font-size:3vw;
+}
+.scrollList {
+ height: 40vw; 
+ overflow: auto; 
+ }
