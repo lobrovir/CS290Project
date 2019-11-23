@@ -14,7 +14,79 @@ body {
 p {
 
 }
+h1 {* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: black;
+  background-image: url("https://github.com/lobrovir/CS290Project/blob/master/dragon_test.png?raw=true"), url("https://github.com/lobrovir/CS290Project/blob/master/warrior_test.png?raw=true");
+  background-position: left, right;
+  background-size: 12vw;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+p {}
+
 h1 {
+  text-align: center;
+  color: DarkRed;
+  padding: 10px 20px 10px 20px;
+  font-size: 5vw;
+}
+
+.links {
+  text-align: center;
+  background-color: DarkRed;
+  padding: 10px 10px 10px 10px;
+  font-size: 2vw;
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 10px;
+}
+
+a:link {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: white;
+}
+
+/* selected link */
+a:active {
+  color: orange;
+}
+
+#scrolltable {
+  height: 200px;
+  overflow: auto;
+}
+
+
+
+table {
+  color: white;
+  border: solid DarkRed 1px;
+  margin-left: auto;
+  margin-right: auto;
+}
+th {
+  border: solid orange 1px;
+}
+td{
+  border: solid red 1px;
+}
+
   text-align: center;
   color: DarkRed;
   padding: 10px 20px 10px 20px;
