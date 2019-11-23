@@ -20,6 +20,42 @@
 
 
 <h1 style = "font-size: 5vw;">Welcome to the Beginner's Guide to Dungeons & Dragons</h1>
+  <div class="slideshow">
+  <img class="slides" src="https://images-na.ssl-images-amazon.com/images/I/51b1qXcbM%2BL._SX380_BO1,204,203,200_.jpg" style="width:50%">
+  <img class="slides" src="https://images-na.ssl-images-amazon.com/images/I/51SsCXWZfZL._SY498_BO1,204,203,200_.jpg" style="width:50%">
+  <img class="slides" src="https://images-na.ssl-images-amazon.com/images/I/513Zt6L7MfL._SY498_BO1,204,203,200_.jpg" style="width:50%">
+  <img class="slides" src="img_forest.jpg" style="width:50%">
+
+  <button class="lButton" onclick="newSlide(-1)">&#8656;</button>
+  <button class="rButton" onclick="newSlide(1)">&#8658;</button>
+</div>
+
+<script>
+var currSlide = 1;
+display(currSlide);
+
+function newSlide(x) {
+  display(currSlide += x);
+}
+
+function display(x) {
+  var images = document.getElementsByClassName("slides");
+  
+  if (x > images.length) {
+  currSlide = 1;
+  }
+  if (x < 1) {
+  currSlide = images.length;
+  }
+  
+  //loop through, show only display the desired picture
+  for (var i = 0; i < images.length; i++) {
+    images[i].style.display = "none";  
+  }
+  images[currSlide-1].style.display = "block";  
+}
+</script>
+
 
 </body>
 </html>
