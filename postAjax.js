@@ -9,7 +9,7 @@ function bindButtons() {
     };
     payload.user = document.getElementById("userName").value;
     payload.pass = document.getElementById("password").value;
-    req.open("POST", "http://httpbin.org/post", true);
+    req.open("POST", " http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php", true);
     req.setRequestHeader("Content-Type", "application/json");
     req.addEventListener("load", function() {
       if (req.status >= 200 && req.status < 400) {
