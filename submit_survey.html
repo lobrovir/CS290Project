@@ -20,29 +20,53 @@
 
 
 <h1 style = "font-size: 5vw;">Please Fill out the Survey:</h1>
-
-     <form>
-       <fieldset>
-         <p>
-           <label for="userName">Enter your username</label>
-         </p>
-         <input type="text" name="userName" id="userName">
-         <p>
-           <label for="password">Enter your password</label>
-         </p>
-         <input type="text" name="password" id="password">
-         <input type="submit" id="postSubmit">
-       </fieldset>
-     </form>
-
-
-     <p>
-       <span>POST username: </span><span id="postUser"></span>
-     </p>
-     <p>
-       <span>POST password: </span><span id="postPass"></span>
-     </p>
-
+          <form>
+            <fieldset>
+                <legend></legend>
+                <label>Name:
+                    <input type="text" name="name">
+                </label>
+                <br />
+                <label>Email
+                    <input type="email" name="email">
+                </label>
+                <br />
+              <label>Age
+                    <input type="number" name="age">
+                </label>
+                <br />
+                <label for="comments">Comments:</label>
+                    <br />
+                    <textarea rows="5" cols="50" id="comments"></textarea>
+                    <br>
+                <input type="submit" value="Submit Info" id="submit" />
+            </fieldset>
+          </form>
+<script>
+    document.addEventListener('DOMContentLoaded', bindButtons);
+    function bindButtons(){
+        document.getElementById('submit').addEventListener('click', function(event){
+        var req = new XMLHttpRequest();
+        var payload = {name:null,email:null, age:null, comments:null};
+        payload.name = document.getElementById('name').value;
+        payload.email = document.getElementById('email').value;
+          payload.age = document.getElementById('age').value;
+        payload.comments = document.getElementById('comments').value;
+        console.log(payload);
+        req.open('POST', ' http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php', true);
+        req.setRequestHeader('Content-Type', 'application/json');
+        req.addEventListener('load',function(){
+          if(req.status >= 200 && req.status < 400){
+            var response = JSON.parse(req.responseText);
+            document.getElementById('shortUrl').textContent = payload;
+            console.log(response);
+          } else {
+            console.log("Error in network request: " + req.statusText);
+          }});
+        req.send(JSON.stringify(payload));
+        event.preventDefault();
+      });}
+</script>
 
 </body>
 </html>
