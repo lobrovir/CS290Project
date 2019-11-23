@@ -8,6 +8,7 @@
 </head>
 
 <body>
+<script src="postAjax.js"></script>
 <div class = "links" style = "font-size: 3vw;">
 <a href="index.html">Homepage</a>
 
@@ -19,6 +20,29 @@
 
 
 <h1 style = "font-size: 5vw;">Please Fill out the Survey:</h1>
+
+     <form>
+       <fieldset>
+         <p>
+           <label for="userName">Enter your username</label>
+         </p>
+         <input type="text" name="userName" id="userName">
+         <p>
+           <label for="password">Enter your password</label>
+         </p>
+         <input type="text" name="password" id="password">
+         <input type="submit" id="postSubmit">
+       </fieldset>
+     </form>
+
+
+     <p>
+       <span>POST username: </span><span id="postUser"></span>
+     </p>
+     <p>
+       <span>POST password: </span><span id="postPass"></span>
+     </p>
+
 
 </body>
 </html>
