@@ -50,7 +50,8 @@ a:active {
 }
 
 #scrolltable {
-  height: 200px;
+  width: 70vw;
+  height: 20vw;
   overflow: auto;
 }
 
@@ -59,12 +60,12 @@ a:active {
 table {
   color: white;
   border: solid DarkRed 1px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left:30vw; 
+  font-size:2vw;
 }
 th {
-  border: solid orange 1px;
+  border: solid orange .25vw;
 }
 td{
-  border: solid red 1px;
+  border: solid red .25vw;
 }
