@@ -23,4 +23,4 @@ function bindButtons() {
     req.send(JSON.stringify(payload));
     event.preventDefault();
   });
-} 
+}
