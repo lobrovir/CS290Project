@@ -21,7 +21,7 @@
 
 
     <h1 style="font-size: 5vw;">Please Fill out the Survey:</h1>
-    <form>
+    <form id="survey">
       <fieldset>
         <label>Name:
           <input type="text" name="name">
@@ -42,18 +42,17 @@
         <br>
         <label for="comment1">How helpful was the site? </label>
         <br>
-        <textarea rows="5" cols="40px" name="comment1" form="comment1"></textarea>
+        <textarea rows="5" cols="40px" name="comment1" form="survey"></textarea>
         <br>
         <label for="comment2">What could be improved? </label>
         <br>
-        <textarea rows="5" cols="40px" name="comment2" form="comment2"></textarea>
+        <textarea rows="5" cols="40px" name="comment2" form="survey"></textarea>
         <br>
         <input type="submit" value="Submit" id="submit" >
       </fieldset>
     </form>
     <script>
       document.addEventListener('DOMContentLoaded', bindButtons);
-      console.log(document.getElementById('comment1').value);
       function bindButtons() {
         document.getElementById('submit').addEventListener('click', function(event) {
           var req = new XMLHttpRequest();
