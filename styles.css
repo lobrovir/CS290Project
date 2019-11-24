@@ -7,7 +7,7 @@ body {
   background-color: black;
   background-image: url("https://github.com/lobrovir/CS290Project/blob/master/dragon_test.png?raw=true"), url("https://github.com/lobrovir/CS290Project/blob/master/warrior_test.png?raw=true");
   background-position: left, right;
-  background-size: 12vw;
+  background-size: 15vw;
   background-repeat: no-repeat;
   background-attachment: fixed;
 
@@ -18,6 +18,7 @@ h1 {
   color: DarkRed;
   padding: 10px 20px 10px 20px;
   font-size: 5vw;
+
 }
 
 .links {
@@ -59,39 +60,72 @@ a:active {
 table {
   color: white;
   border: solid DarkRed 1px;
-  margin-left:30vw; 
-  font-size:2vw;
+  margin-left: 30vw;
+  font-size: 2vw;
 }
+
 th {
   border: solid orange .25vw;
 }
-td{
+
+td {
   border: solid red .25vw;
 }
-.slideshow{
-  margin-left:35vw;
+
+.slideshow {
+  margin-left: 35vw;
 }
-.lButton{
-    position:absolute;
-left: 20vw;
-top: 40vw;
-background-color:red;
-font-size:3vw;
+
+.lButton {
+  position: absolute;
+  left: 20vw;
+  top: 40vw;
+  background-color: red;
+  font-size: 3vw;
 }
-.rButton{
-position:absolute;
-right: 20vw;
-top: 40vw;
-background-color:red;
-font-size:3vw;
+
+.rButton {
+  position: absolute;
+  right: 20vw;
+  top: 40vw;
+  background-color: red;
+  font-size: 3vw;
 }
+
 ul {
   list-style-position: inside;
   color: white;
-  margin-left:20vw; 
-  font-size:3vw;
+  margin-left: 20vw;
+  font-size: 3vw;
 }
+
 .scrollList {
- height: 40vw; 
- overflow: auto; 
- }
+  height: 40vw;
+  overflow: auto;
+}
+
+form {
+  width: 50%;
+  background-color: red;
+  margin-left: 25vw;
+  font-size: 3vw;
+  text-align: center;
+  font-size: 3vw;
+}
+
+input[type=text],
+input[type=email] {
+
+  margin: 10px 0px;
+  width: 20vw
+}
+
+input[type=number] {
+  margin: 10px 0px;
+  width: 5vw;
+
+}
+
+textarea {
+  width: 40vw;
+}
