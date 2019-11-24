@@ -3,9 +3,27 @@
   padding: 0px;
 }
 
-body {
+body.home {
   background-color: black;
-  background-image: url("https://github.com/lobrovir/CS290Project/blob/master/dragon_test.png?raw=true"), url("https://github.com/lobrovir/CS290Project/blob/master/warrior_test.png?raw=true");
+  background-image: url("https://github.com/lobrovir/CS290Project/blob/master/siteImages/dragon_test.png?raw=true"), url("https://github.com/lobrovir/CS290Project/blob/master/siteImages/warrior_test.png?raw=true");
+  background-position: left, right;
+  background-size: 15vw;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+body.items {
+  background-color: black;
+  background-image: url("https://github.com/lobrovir/CS290Project/blob/master/siteImages/itemsL.png?raw=true"), url("https://github.com/lobrovir/CS290Project/blob/master/siteImages/itemsR.png?raw=true");
+  background-position: left, right;
+  background-size: 15vw;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+body.races {
+  background-color: black;
+  background-image: url("https://github.com/lobrovir/CS290Project/blob/master/siteImages/rcL.png?raw=true"), url("https://github.com/lobrovir/CS290Project/blob/master/siteImages/rcR.png?raw=true");
   background-position: left, right;
   background-size: 15vw;
   background-repeat: no-repeat;
