@@ -40,15 +40,15 @@
           <input type="radio" name="gender" value="other"> Other
         </form>
         <br>
-        <label for="comment1">How helpful was the site? </label>
+        <label>How helpful was the site? </label>
         <br>
         <textarea rows="5" cols="40px" name="comment1" form="survey"></textarea>
         <br>
-        <label for="comment2">What could be improved? </label>
+        <label>What could be improved? </label>
         <br>
         <textarea rows="5" cols="40px" name="comment2" form="survey"></textarea>
         <br>
-        <input type="submit" value="Submit" id="submit" >
+        <input type="submit" value="submit" id="submit" >
       </fieldset>
     </form>
     <script>
@@ -70,13 +70,13 @@
           payload.gender = document.getElementById('gender').value;
           payload.comment1 = document.getElementById('comment1').value;
           payload.comment2 = document.getElementById('comment2').value;
-          console.log(payload);
+          console.log(payload.comment1);
           req.open('POST', ' http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php', true);
           req.setRequestHeader('Content-Type', 'application/json');
           req.addEventListener('load', function() {
             if (req.status >= 200 && req.status < 400) {
               var response = JSON.parse(req.responseText);
-              document.getElementById('shortUrl').textContent = payload;
+              
             } else {
               console.log("Error in network request: " + req.statusText);
             }
