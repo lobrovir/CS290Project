@@ -1,72 +1,94 @@
 <!DOCTYPE html>
 
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Beginner's D&D</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
-</head>
 
-<body>
-<script src="postAjax.js"></script>
-<div class = "links" style = "font-size: 3vw;">
-<a href="index.html">Homepage</a>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner's D&D</title>
+    <LINK href="styles.css" rel="stylesheet" type="text/css">
+  </head>
 
-<a href="races_classes.html">Races & Classes</a>
+  <body>
+    <script src="postAjax.js"></script>
+    <div class="links" style="font-size: 3vw;">
+      <a href="index.html">Homepage</a>
 
-<a href="items_equip.html">Items & Equipment</a>
+      <a href="races_classes.html">Races & Classes</a>
 
-  </div>
+      <a href="items_equip.html">Items & Equipment</a>
+
+    </div>
 
 
-<h1 style = "font-size: 5vw;">Please Fill out the Survey:</h1>
-          <form>
-            <fieldset>
-                <legend></legend>
-                <label>Name:
-                    <input type="text" name="name">
-                </label>
-                <br />
-                <label>Email
-                    <input type="email" name="email">
-                </label>
-                <br />
-              <label>Age
-                    <input type="number" name="age">
-                </label>
-                <br />
-                <label for="comments">Comments:</label>
-                    <br />
-                    <textarea rows="5" cols="50" id="comments"></textarea>
-                    <br>
-                <input type="submit" value="Submit Info" id="submit" />
-            </fieldset>
-          </form>
-<script>
-    document.addEventListener('DOMContentLoaded', bindButtons);
-    function bindButtons(){
-        document.getElementById('submit').addEventListener('click', function(event){
-        var req = new XMLHttpRequest();
-        var payload = {name:null,email:null, age:null, comments:null};
-        payload.name = document.getElementById('name').value;
-        payload.email = document.getElementById('email').value;
+    <h1 style="font-size: 5vw;">Please Fill out the Survey:</h1>
+    <form>
+      <fieldset>
+        <label>Name:
+          <input type="text" name="name">
+        </label>
+        <br>
+        <label>Email:
+          <input type="email" name="email">
+        </label>
+        <br>
+        <label>Age:<input type="number" min="1" name="age">
+        </label>
+        <br>
+        <form>
+          <input type="radio" name="gender" value="male"> Male<br>
+          <input type="radio" name="gender" value="female"> Female<br>
+          <input type="radio" name="gender" value="other"> Other
+        </form>
+        <br>
+        <label for="comments">How helpful was the site? </label>
+        <br>
+        <textarea rows="5" cols="40px" id="comment1"></textarea>
+        <br>
+        <label for="comments">What could be improved? </label>
+        <br>
+        <textarea rows="5" cols="40px" id="comment2"></textarea>
+        <br>
+        <input type="submit" value="Submit" id="submit" />
+      </fieldset>
+    </form>
+    <script>
+      document.addEventListener('DOMContentLoaded', bindButtons);
+
+      function bindButtons() {
+        document.getElementById('submit').addEventListener('click', function(event) {
+          var req = new XMLHttpRequest();
+          var payload = {
+            name: null,
+            email: null,
+            age: null,
+            gender: null,
+            comment1: null,
+            comment2: null
+          };
+          payload.name = document.getElementById('name').value;
+          payload.email = document.getElementById('email').value;
           payload.age = document.getElementById('age').value;
-        payload.comments = document.getElementById('comments').value;
-        console.log(payload);
-        req.open('POST', ' http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php', true);
-        req.setRequestHeader('Content-Type', 'application/json');
-        req.addEventListener('load',function(){
-          if(req.status >= 200 && req.status < 400){
-            var response = JSON.parse(req.responseText);
-            document.getElementById('shortUrl').textContent = payload;
-            console.log(response);
-          } else {
-            console.log("Error in network request: " + req.statusText);
-          }});
-        req.send(JSON.stringify(payload));
-        event.preventDefault();
-      });}
-</script>
+          payload.gender = document.getElementById('gender').value;
+          payload.comment1 = document.getElementById('comment1').value;
+          payload.comment2 = document.getElementById('comment2').value;
+          req.open('POST', ' http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php', true);
+          req.setRequestHeader('Content-Type', 'application/json');
+          req.addEventListener('load', function() {
+            if (req.status >= 200 && req.status < 400) {
+              var response = JSON.parse(req.responseText);
+              document.getElementById('shortUrl').textContent = payload;
+            } else {
+              console.log("Error in network request: " + req.statusText);
+            }
+          });
+          req.send(JSON.stringify(payload));
+          event.preventDefault();
+        });
+      }
 
-</body>
+    </script>
+
+  </body>
+
 </html>
