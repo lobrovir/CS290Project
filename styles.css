@@ -12,6 +12,7 @@ body.home {
   background-attachment: fixed;
 
 }
+
 body.items {
   background-color: black;
   background-image: url("https://github.com/lobrovir/CS290Project/blob/master/siteImages/itemsL.png?raw=true"), url("https://github.com/lobrovir/CS290Project/blob/master/siteImages/itemsR.png?raw=true");
@@ -21,6 +22,7 @@ body.items {
   background-attachment: fixed;
 
 }
+
 body.races {
   background-color: black;
   background-image: url("https://github.com/lobrovir/CS290Project/blob/master/siteImages/rcL.png?raw=true"), url("https://github.com/lobrovir/CS290Project/blob/master/siteImages/rcR.png?raw=true");
@@ -68,18 +70,18 @@ a:active {
   color: orange;
 }
 
-#scrolltable {
+.scrolltable {
   width: 70vw;
   height: 20vw;
   overflow: auto;
-  padding:20px 0px 20px 0px;
+  margin-top: 5vw;
 }
 
 
 table {
   color: white;
   border: solid DarkRed 1px;
-  margin-left: 30vw;
+  margin-left: 28vw;
   font-size: 2vw;
 }
 
@@ -92,7 +94,7 @@ td {
 }
 
 .slideshow {
-  margin-left: 35vw;
+  margin-left: 33vw;
 }
 
 .lButton {
@@ -143,8 +145,9 @@ input[type=number] {
   width: 5vw;
 
 }
+
 #submit {
-  font-size:2vw;
+  font-size: 2vw;
   width: 8vw;
 
 }
@@ -152,7 +155,12 @@ input[type=number] {
 textarea {
   width: 40vw
 }
-br {
-   display: block;
-   margin: 10px 0;
+
+
+
+h5 {
+  text-align: center;
+  color: white;
+  margin-left: 20vw;
+  margin-right: 20vw;
 }
