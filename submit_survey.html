@@ -41,20 +41,20 @@
           <input type="radio" name="gender" value="other"> Other
         </form>
         <br>
-        <label for="comments">How helpful was the site? </label>
+        <label for="comment1">How helpful was the site? </label>
         <br>
         <textarea rows="5" cols="40px" id="comment1"></textarea>
         <br>
-        <label for="comments">What could be improved? </label>
+        <label for="comment2">What could be improved? </label>
         <br>
         <textarea rows="5" cols="40px" id="comment2"></textarea>
         <br>
-        <input type="submit" value="Submit" id="submit" />
+        <input type="submit" value="Submit" id="submit" >
       </fieldset>
     </form>
     <script>
       document.addEventListener('DOMContentLoaded', bindButtons);
-
+      console.log(comment1);
       function bindButtons() {
         document.getElementById('submit').addEventListener('click', function(event) {
           var req = new XMLHttpRequest();
