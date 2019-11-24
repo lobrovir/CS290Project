@@ -133,3 +133,7 @@ input[type=number] {
 textarea {
   width: 40vw
 }
+br {
+   display: block;
+   margin: 10px 0;
+}
