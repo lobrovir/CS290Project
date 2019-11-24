@@ -1,61 +1,68 @@
 <!DOCTYPE html>
 
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Beginner's D&D</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
-</head>
 
-<body class="home">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Beginner's D&D</title>
+    <LINK href="styles.css" rel="stylesheet" type="text/css">
+  </head>
 
-  
-<div class = "links" style = "font-size: 3vw;">
-<a href="races_classes.html">Races & Classes</a>
-
-<a href="items_equip.html">Items & Equipment</a>
-
-<a href="submit_survey.html">Submit Survey</a>
-  </div>
+  <body class="home">
 
 
-<h1 style = "font-size: 5vw;">Welcome to the Beginner's Guide to Dungeons & Dragons</h1>
-  <div class="slideshow">
-  <img class="slides" src="https://images-na.ssl-images-amazon.com/images/I/51b1qXcbM%2BL._SX380_BO1,204,203,200_.jpg" style="width:50%">
-  <img class="slides" src="https://images-na.ssl-images-amazon.com/images/I/51SsCXWZfZL._SY498_BO1,204,203,200_.jpg" style="width:50%">
-  <img class="slides" src="https://images-na.ssl-images-amazon.com/images/I/513Zt6L7MfL._SY498_BO1,204,203,200_.jpg" style="width:50%">
-  <img class="slides" src="img_forest.jpg" style="width:50%">
+    <div class="links" style="font-size: 3vw;">
+      <a href="races_classes.html">Races & Classes</a>
 
-  <button class="lButton" onclick="newSlide(-1)">&#8656;</button>
-  <button class="rButton" onclick="newSlide(1)">&#8658;</button>
-</div>
+      <a href="items_equip.html">Items & Equipment</a>
 
-<script>
-var currSlide = 1;
-display(currSlide);
-
-function newSlide(x) {
-  display(currSlide += x);
-}
-
-function display(x) {
-  var images = document.getElementsByClassName("slides");
-  
-  if (x > images.length) {
-  currSlide = 1;
-  }
-  if (x < 1) {
-  currSlide = images.length;
-  }
-  
-  //loop through, show only display the desired picture
-  for (var i = 0; i < images.length; i++) {
-    images[i].style.display = "none";  
-  }
-  images[currSlide-1].style.display = "block";  
-}
-</script>
+      <a href="submit_survey.html">Submit Survey</a>
+    </div>
 
 
-</body>
+    <h1 style="font-size: 5vw;">Welcome to the Beginner's Guide to Dungeons & Dragons</h1>
+    <div class="slideshow">
+      <img class="slides" src="https://github.com/lobrovir/CS290Project/blob/master/siteImages/5ePH.jpg?raw=true" style="width:50%">
+      <img class="slides" src="https://github.com/lobrovir/CS290Project/blob/master/siteImages/5eMM.jpg?raw=true" style="width:50%">
+      <img class="slides" src="https://github.com/lobrovir/CS290Project/blob/master/siteImages/5eDMG.jpg?raw=true" style="width:50%">
+
+      <button class="lButton" onclick="newSlide(-1)">&#8656;</button>
+      <button class="rButton" onclick="newSlide(1)">&#8658;</button>
+    </div>
+    <h5 style="padding-top:80px;">background image source: https://www.itl.cat/pics/b/37/378660_dnd-wallpapers.jpg
+    </h5>
+    <h5>PH image source: https://www.amazon.com/Players-Handbook-Dungeons-Dragons-Wizards/dp/0786965606
+    </h5>
+    <h5>MM image source: https://www.walmart.com/ip/Monster-Manual-A-Dungeons-Dragons-Core-Rulebook/37784456</h5>
+    <h5>DMG image source: http://online.anyflip.com/ceso/evpv/files/mobile/1.jpg</h5>
+    <script>
+      var currSlide = 1;
+      display(currSlide);
+
+      function newSlide(x) {
+        display(currSlide += x);
+      }
+
+      function display(x) {
+        var images = document.getElementsByClassName("slides");
+
+        if (x > images.length) {
+          currSlide = 1;
+        }
+        if (x < 1) {
+          currSlide = images.length;
+        }
+
+        //loop through, show only display the desired picture
+        for (var i = 0; i < images.length; i++) {
+          images[i].style.display = "none";
+        }
+        images[currSlide - 1].style.display = "block";
+      }
+
+    </script>
+
+
+  </body>
+
 </html>
