@@ -62,6 +62,7 @@ table {
   border: solid DarkRed 1px;
   margin-left: 30vw;
   font-size: 2vw;
+  padding-top:20px;
 }
 
 th {
