@@ -108,9 +108,8 @@ form {
   width: 50%;
   background-color: red;
   margin-left: 25vw;
-  font-size: 3vw;
   text-align: center;
-  font-size: 3vw;
+  font-size: 2vw;
 }
 
 input[type=text],
@@ -125,7 +124,12 @@ input[type=number] {
   width: 5vw;
 
 }
+#submit {
+  font-size:2vw;
+  width: 8vw;
+
+}
 
 textarea {
-  width: 40vw;
+  width: 40vw
 }
