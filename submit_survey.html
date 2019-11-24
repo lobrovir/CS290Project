@@ -10,7 +10,6 @@
   </head>
 
   <body>
-    <script src="postAjax.js"></script>
     <div class="links" style="font-size: 3vw;">
       <a href="index.html">Homepage</a>
 
@@ -54,7 +53,7 @@
     </form>
     <script>
       document.addEventListener('DOMContentLoaded', bindButtons);
-      console.log(comment1);
+      console.log(document.getElementById('comment1').value);
       function bindButtons() {
         document.getElementById('submit').addEventListener('click', function(event) {
           var req = new XMLHttpRequest();
